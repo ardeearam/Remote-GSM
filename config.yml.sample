@@ -1,0 +1,6 @@
+---
+:port: COM26
+:remote_gsm_write: https://sqs.ap-southeast-1.amazonaws.com/XXXXXXXXXX/remote_gsm_write
+:remote_gsm_read: https://sqs.ap-southeast-1.amazonaws.com/XXXXXXXXXXX/remote_gsm_read
+:aws_access_key_id: XXXXXXXXXXX
+:aws_secret_access_key: XXXXXXXX 

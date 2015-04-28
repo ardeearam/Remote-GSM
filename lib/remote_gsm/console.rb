@@ -1,11 +1,14 @@
+require 'io/console'
+require 'java'
+
 class RemoteGsm
   class Console
     def self.run
-      puts "RemoteGsm::Console"
+      puts "RemoteGsm::Console >"
       loop do 
-        print ">"
-        input = STDIN.gets.chomp
-        break if input =~ /^quit$/i
+        input = STDIN.gets
+        print input
+        break if input == "!!!\n"
       end
     end    
   end
