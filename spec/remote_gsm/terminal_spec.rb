@@ -1,31 +1,31 @@
-describe 'device' do
+describe 'terminal' do
     
-  require 'remote_gsm/device'
+  require 'remote_gsm/terminal'
 
     it 'should be able to write to SQS' do
-      device = nil
+      terminal = nil
       begin
-        device = RemoteGsm::Device.new
-        result = device.write("AT\n")
+        terminal = RemoteGsm::Terminal.new
+        result = terminal.write("AT\n")
         expect(result).to_not be_nil
         expect(result[:index]).to be 1
         expect(result[:message]).to eq "AT\n"
       ensure
-        device.close if !device.nil?         
+        terminal.close if terminal.nil?         
       end    
     end
     
     it 'should be able to track message index' do
-      device = nil
+      terminal = nil
       begin
-        device = RemoteGsm::Device.new
-        device.write("AT\n")
-        result = device.write("AT\n")
+        terminal = RemoteGsm::Terminal.new
+        terminal.write("AT\n")
+        result = terminal.write("AT\n")
         expect(result).to_not be_nil
         expect(result[:index]).to be 2
         expect(result[:message]).to eq "AT\n"
       ensure
-        device.close if !device.nil?         
+        terminal.close if terminal.nil?         
       end    
     end    
     

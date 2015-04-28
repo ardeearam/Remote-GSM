@@ -9,7 +9,10 @@ require 'jar/jackson-core-2.5.0.jar'
 require 'jar/jackson-databind-2.3.1.jar'
 
 class RemoteGsm
-  class Device
+  class Terminal
+    
+    #The terminal is where you control the remote device. This will be
+    #the main interface of other applications to the remote GSM.
     
     import 'com.amazonaws.services.sqs.AmazonSQSClient'
     import 'com.amazonaws.auth.BasicAWSCredentials'
