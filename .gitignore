@@ -37,3 +37,4 @@ build/
 # ignore JAR and Binary files.
 *.jar
 *.dll
+config.yml
